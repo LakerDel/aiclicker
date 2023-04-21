@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Klikacz</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			margin-top: 50px;
+		}
+		
+		#score {
+			font-size: 36px;
+			margin-top: 50px;
+		}
+		
+		#button {
+			background-color: #4CAF50;
+			color: white;
+			font-size: 24px;
+			padding: 10px 20px;
+			border-radius: 10px;
+			cursor: pointer;
+			margin-top: 50px;
+		}
+		
+		#button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kliknij w przycisk!</h1>
+	<p id="score">Twój wynik: 0</p>
+	<button id="button">Kliknij mnie</button>
+	
+	<script>
+		var score = 0;
+		var button = document.getElementById("button");
+		var scoreElement = document.getElementById("score");
+		
+		button.addEventListener("click", function() {
+			score++;
+			scoreElement.innerHTML = "Twój wynik: " + score;
+		});
+	</script>
+</body>
+</html>
